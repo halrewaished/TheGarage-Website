@@ -1,10 +1,80 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [  
+  content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-   ],
+    "./src/**/*.{html,js}",
+    "./node_modules/tw-elements/dist/js/**/*.js",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        lightGreeneColor: "#29BFA7",
+        purpleColor: "#231A2A",
+        darkColor: "#000000",
+        lightGreyColor: "#999999",
+        lightOrangeColor: "#F39471",
+        neonGreenColor: "#75FB4C",
+        primaryColor: "#EEE9E1",
+        secondaryColor: "#272727",
+        yellow: "#FCCC10",
+        readColor: "#e22519",
+        whiteColor: "#ffffffff",
+        whiteGreyColor: "#F7F6F3",
+        cardBgColor: "#f7f6f1",
+        greyContainerColor: "#E0DBD5",
+        yellowColor: "#E2B619",
+        accentColor: "#001bff",
+        blueColorA: "#072551",
+        binkColorA: "#c20158",
+        yellowColorA: "#efbf3f",
+        redColorA: "#BD0034",
+        cardBgColorA: "#d5d5d5",
+        greyColorA: "#F4F4F4",
+        /////
+        greyColor: "ADADAD",
+        greyDarkColor: "#AEAEB2",
+        beigeDarkColor: "#D6D1CA",
+        imagePlaceHolderColor: "#EFEFEF",
+        textPlaceHolder: "#D4D4D4",
+        yellowColorB: "#F4CE48",
+        green300: "#6CCFBD",
+        secondaryGreen400: "#50C5B1",
+      },
+      scale: {
+        "-100": "-1",
+      },
+      textUnderlineOffset: {
+        8: "25px",
+      },
+      screens: {
+        mobile: { max: "767px" },
+        tablet: { min: "768px", max: "1023px" },
+        laptop: { min: "1024px", max: "1279px" },
+        largeLaptop: { min: "1280px", max: "1535px" },
+        desktop: { min: "1536px" },
+      },
+      fontFamily: {
+        en: "'Typewriter-Regular'",
+        title: "'Mada-Regular'",
+        DEFAULT: "'ArbFONTS-Regular'",
+        ar: "'ArbFONTS-Bold'",
+        arabic_normal: "'ArabFont-normal'",
+        access: "JF-Flat-regular",
+        accessEng: "Metropolis-Regular",
+        ////
+        cairoBold: "Cairo-Bold",
+        cairoMedium: "Cairo-Medium",
+        cairoRegular: "Cairo-Regular",
+        cairoSemiBold: "Cairo-SemiBold",
+      },
+      backgroundPosition: {
+        "pattren-position": "left 3600px",
+      },
+      transitionDuration: {
+        2000: "2000ms",
+        3000: "3000ms",
+      },
+    },
   },
-  plugins: [],
-}
+  plugins: [require("tw-elements/dist/plugin")],
+};

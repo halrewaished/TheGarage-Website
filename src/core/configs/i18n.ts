@@ -1,8 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-
 import { LanguagesEnum } from '../enums/example.enum';
-
 import TranslationAr from '../locales/ar/translation.json';
 import TranslationEn from '../locales/en/translation.json';
 
@@ -20,7 +18,7 @@ i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     resources,
-    lng: LanguagesEnum.AR,
+    lng: LanguagesEnum.EN,
 
     keySeparator: false, // we do not use keys in form messages.welcome
 

@@ -1,4 +1,25 @@
+import { DefaultTFuncReturn } from "i18next";
 
+export interface IRoutesTitle {
+    routeTitle: DefaultTFuncReturn,
+    routePath: string
+}
+export interface IMapRoutes {
+    title: string,
+    routes: IRoutesTitle[],
+}
+export interface IAccessGridText {
+    text: string
+
+}
+export interface IText {
+    text: string
+	isPlus: boolean
+}
+export interface IAccessText {
+    text: any
+	text2?:any
+}
 export type UserModel = {
 	id: string;
 	first_name: string;
